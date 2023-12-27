@@ -1,8 +1,8 @@
-"""Empty Init
+"""Renaming students to scholars
 
-Revision ID: 6b9cb35ba46e
-Revises: 
-Create Date: 2022-08-04 13:21:26.936909
+Revision ID: ac8a74e1bee4
+Revises: 791279dd0760
+Create Date: 2023-12-12 18:31:18.295503
 
 """
 from alembic import op
@@ -10,16 +10,17 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '6b9cb35ba46e'
-down_revision = None
+revision = 'ac8a74e1bee4'
+down_revision = '791279dd0760'
 branch_labels = None
 depends_on = None
 
 
-
 def upgrade() -> None:
+    pass
     op.rename_table('students', 'scholars')
 
 
 def downgrade() -> None:
+    pass
     op.rename_table('scholars', 'students')
